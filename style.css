@@ -1,0 +1,362 @@
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(46, 45, 45);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gameCont {
+  background-color: rgb(221, 220, 220);
+  margin: 10px;
+  padding: 10px;
+  width: 510px;
+  text-align: center;
+}
+
+.gameCont h3 {
+  font-size: 1.5rem;
+}
+
+.score,
+.gameCont h3 {
+  margin: 0;
+}
+
+.score {
+  font-size: 1.3rem;
+  font-family: sans-serif;
+  margin-bottom: 10px;
+}
+
+.gameScreen {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gameScreen .box {
+  width: 50px;
+  height: 50px;
+  margin: 2px;
+  border: 1px solid black;
+  transition: all 0.2s ease;
+}
+
+.gameScreen .box:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.hello {
+  font-size: 10px;
+}
+
+/* modal */
+
+.modalContainer {
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  transition: opacity 1s ease;
+  align-items: center;
+}
+
+.modalContainer.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal {
+  position: relative;
+  padding: 20px 0;
+  width: 400px;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+}
+
+.modal.lose {
+  background: radial-gradient(
+    rgb(236, 77, 77),
+    rgb(128, 10, 10)
+  );
+  color: white;
+}
+
+.modal.win {
+  background: radial-gradient(
+    rgb(77, 236, 143),
+    rgb(10, 128, 55)
+  );
+  color: white;
+}
+
+.modal-again {
+  font-size: 20px;
+  background-color: inherit;
+  border: 1px solid white;
+  border-radius: 6px;
+  padding: 4px 10px;
+  height: 40px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.modal.lose .modal-again:hover {
+  background-color: rgb(128, 10, 10);
+}
+
+.modal.win .modal-again:hover {
+  background-color: rgb(10, 128, 55);
+}
+
+/* How To Play Container */
+.howtoContainer {
+  background-color: #2e2d2df3;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+  z-index: 99;
+}
+
+.howtoContainer.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.howtoContainer .content {
+  position: relative;
+  background-color: white;
+  width: 500px;
+  padding: 20px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.howtoContainer .content .close {
+  color: red;
+  font-size: 30px;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.howtoContainer .content .close:hover {
+  transform: scale(1.3);
+}
+
+/* Menu */
+.menu {
+  position: fixed;
+  top: 4%;
+  left: 2%;
+  cursor: pointer;
+  position: fixed;
+  z-index: 99;
+}
+
+.menu div {
+  width: 40px;
+  height: 4px;
+  background-color: #ffffff;
+  margin: 7px;
+  transition: all 0.5s ease;
+}
+
+.menu.toggle .line1 {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.menu.toggle .line2 {
+  opacity: 0;
+}
+
+.menu.toggle .line3 {
+  transform: rotate(45deg) translate(-9px, -6px);
+}
+
+.statsContainer {
+  position: absolute;
+  left: 0;
+  height: 100vh;
+  top: 0;
+  background-color: #615d5d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 40%;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(-100%);
+  color: white;
+  z-index: 98;
+}
+
+.statsContainer-active {
+  transform: translateX(0%);
+}
+
+.statsContainer li {
+  list-style: none;
+  color: rgb(231, 229, 229);
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+
+.statsContainer li.howtoplay {
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.statsContainer li.howtoplay::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 150px;
+  transform: translateX(-50%);
+  border-top: 2px solid white;
+  width: 100%;
+}
+
+.statsContainer li.howtoplay::before {
+  content: "";
+  position: absolute;
+  bottom: 75px;
+  width: 0px;
+  height: 40px;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  transition: all 0.3s ease;
+}
+
+.statsContainer li.howtoplay::selection {
+  background: none;
+}
+
+.statsContainer li.howtoplay:hover::before {
+  width: 195px;
+}
+
+.statsContainer li span {
+  font-weight: bold;
+}
+
+/* Form Container */
+.formContainer {
+  background-color: white;
+  color: black;
+  position: fixed;
+  font-size: 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 9px;
+  bottom: 5%;
+  left: 5%;
+  z-index: 0;
+  transition: all 1s ease;
+}
+
+@keyframes anim {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-150%);
+  }
+}
+
+.formContainer .user-check {
+  color: black;
+  margin-left: 10px;
+  transition: all 0.3s ease;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.formContainer input {
+  border: none;
+  outline: none;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+/* About User Container */
+.aboutUserContainer {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background-color: transparent;
+  top: 4%;
+  right: 2%;
+  z-index: 2;
+  font-size: 23px;
+  padding: 4px 7px;
+  color: white;
+}
+
+.aboutUserContainer .wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.aboutUserContainer .username {
+  margin-left: 10px;
+}
+
+.aboutUserContainer .changeName {
+  max-width: 80px;
+  border: 1px solid #3f5cc4;
+  font-size: 12px;
+  border-radius: 12px;
+  background-color: transparent;
+  color: #3f5cc4;
+  outline: none;
+  cursor: pointer;
+  padding: 2px 5px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  transform: translateX(-3%);
+}
+
+.aboutUserContainer .changeName:hover {
+  color: white;
+  background-color: #3f5cc4;
+}
+
+.aboutUserContainer .changeName i {
+  margin-left: 5px;
+}

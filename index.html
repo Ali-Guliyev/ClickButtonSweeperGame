@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>MineSweeper Game</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="gameCont">
+        <div class="mainContent">
+          <h3>MineSweeper Game</h3>
+          <p class="score">Score: <span>0</span></p>
+        </div>
+
+        <div class="gameScreen">
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+          <div class="box goodbox"></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="howtoContainer">
+      <div class="content">
+        <h1>How to Play</h1>
+        <p>
+          Here you should guess which is bad box and which
+          is good box. By clicking to the box you guess if
+          it's bad or not, if it's bad you lose the game! to
+          win the game you should guess more than 10 good
+          boxes! Good Luck My Friend!
+        </p>
+        <i class="close fas fa-times"></i>
+      </div>
+    </div>
+
+    <div class="menu">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+
+    <ul class="statsContainer">
+      <li class="highScore">High Score: <span>0</span></li>
+      <li class="gamesWon">Games Won: <span>0</span></li>
+      <li class="gamesLost">Games Lost: <span>0</span></li>
+      <li class="howtoplay">How to play</li>
+    </ul>
+
+    <div class="modalContainer">
+      <div class="modal">
+        <h1 class="game-status"></h1>
+        <p class="score">Score: <span>0</span></p>
+
+        <button class="modal-again">Play Again</button>
+      </div>
+    </div>
+
+    <div class="aboutUserContainer">
+      <div class="wrapper">
+        <i class="fas fa-user"></i>
+        <p class="username">LinkDaBossMan</p>
+      </div>
+      <button class="changeName">Change <i class="fas fa-sync-alt"></i></button>
+    </div>
+
+    <form class="formContainer">
+      <i class="user-icon fas fa-user"></i>
+      <input placeholder="Nickname" type="text" />
+      <i class="user-check fas fa-check"></i>
+    </form>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,5 +1,15 @@
 console.log(localStorage);
 
+const gameScreen = document.querySelector(".gameScreen");
+// create boxes
+
+for (let i = 0; i <= 80; i++) {
+  var box = document.createElement("div");
+  box.classList.add("box");
+  box.classList.add("goodbox");
+  gameScreen.appendChild(box);
+}
+
 const buttons = document.querySelectorAll(".box");
 const scoreEl = document.querySelector(".score span");
 const burgerMenu = document.querySelector(".menu");
@@ -50,7 +60,7 @@ const userContInp = document.querySelector(
 const usernameEl = document.querySelector(
   ".aboutUserContainer .username"
 );
-const badBoxes = 15;
+const badBoxes = 20;
 const scoreForWin = 10;
 const mainColor = randomColor();
 var score = 0;

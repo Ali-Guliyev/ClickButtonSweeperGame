@@ -4,4 +4,4 @@ This is the simple version of minesweeper game, BUT! with menu, high score, user
 
 ### SHORTLY just clone it and enjoy the game!
 
-### But if you don't want to clone the repo, just go to this link -> https://minesweepergamebyali.netlify.app/
+### But if you don't want to clone the repo, just go to this link -> https://clickbuttonsweeper.netlify.app
